@@ -1,68 +1,73 @@
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
- 
-local Fluent = loadstring(Game:HttpGet("https://raw.githubusercontent.com/discoart/FluentPlus/refs/heads/main/release.lua", true))() 
 
-local Window = Fluent:CreateWindow({
-    Title = "Dead Rails",
-    SubTitle = "Feito por Lucas",
-    TabWidth = 160,
-    Size = UDim2.fromOffset(500, 350),
-    Acrylic = false,
-    Theme = "Dark",
-    Center = true,
-    IsDraggable = true
+-- Load Rayfield
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- Create Window
+local Window = Rayfield:CreateWindow({
+    Name = "Dead Rails",
+    LoadingTitle = "Dead Rails Script",
+    LoadingSubtitle = "Made by Lucas",
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = "DeadRailsConfig",
+        FileName = "Config"
+    },
+    Discord = {
+        Enabled = false,
+        Invite = "noinvitelink",
+        RememberJoins = true
+    },
+    KeySystem = false,
 })
 
-
 if getgenv().teste then
-    local Tab = Window:AddTab({ Title = "testes", Icon = "home" })
+    local Tab = Window:CreateTab("Tests", "flask-conical") -- Using test tube icon
 
     local defaultTpPos = Vector3.new(100, 10, 200)
     local currentTpPos = defaultTpPos
 
-    Tab:AddButton({
-        Title = "Teleportar",
-        Description = "Tp normal",
+    Tab:CreateButton({
+        Name = "Teleport",
         Callback = function()
             local char = game.Players.LocalPlayer.Character
             if char and char:FindFirstChild("HumanoidRootPart") then
                 char:MoveTo(currentTpPos)
             end
-        end
+        end,
     })
 
-    Tab:AddButton({
-        Title = "Tp Spawn",
-        Description = "Define o local atual como novo TP",
+    Tab:CreateButton({
+        Name = "Set TP to Current Position",
         Callback = function()
             local char = game.Players.LocalPlayer.Character
             if char and char:FindFirstChild("HumanoidRootPart") then
                 currentTpPos = char.HumanoidRootPart.Position
             end
-        end
+        end,
     })
 
-    Tab:AddButton({
-        Title = "Reset Tp",
-        Description = "Volta o TP para o padrão",
+    Tab:CreateButton({
+        Name = "Reset TP Position",
         Callback = function()
             currentTpPos = defaultTpPos
-        end
+        end,
     })
 
-    Tab:AddSlider("Slider", {
-        Title = "Velocidade",
-        Default = 16,
-        Min = 10,
-        Max = 150,
-        Rounding = 1,
+    Tab:CreateSlider({
+        Name = "Walk Speed",
+        Range = {10, 150},
+        Increment = 1,
+        Suffix = "speed",
+        CurrentValue = 16,
+        Flag = "WalkSpeed",
         Callback = function(Value)
             local char = game.Players.LocalPlayer.Character
             if char and char:FindFirstChildOfClass("Humanoid") then
                 char:FindFirstChildOfClass("Humanoid").WalkSpeed = Value
             end
-        end
+        end,
     })
 
     local flying = false
@@ -70,15 +75,17 @@ if getgenv().teste then
     local speed = 3
     local bv, bg, char, hrp, humanoid
 
-    Tab:AddToggle("FlyToggle", {
-        Title = "Fly (Analógico Mobile)",
-        Default = false,
+    Tab:CreateToggle({
+        Name = "Fly (Mobile Analog)",
+        CurrentValue = false,
+        Flag = "FlyToggle",
         Callback = function(state)
             flying = state
             char = game.Players.LocalPlayer.Character
             if not char or not char:FindFirstChild("HumanoidRootPart") then return end
             hrp = char:FindFirstChild("HumanoidRootPart")
             humanoid = char:FindFirstChildWhichIsA("Humanoid")
+            
             if flying then  
                 bv = Instance.new("BodyVelocity")  
                 bv.Velocity = Vector3.zero  
@@ -109,38 +116,28 @@ if getgenv().teste then
                 if bg then bg:Destroy() end  
                 if humanoid then humanoid.PlatformStand = false end  
             end  
-        end
+        end,
     })
-
-    -- repeat task.wait() until game:IsLoaded()
 
     local bondLabel
     pcall(function()
         bondLabel = game.Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("BondGui"):WaitForChild("BondInfo"):WaitForChild("BondCount")
     end)
 
-    Tab:AddParagraph({
-        Title = "Seu Bond:",
+    Tab:CreateParagraph({
+        Title = "Your Bond:",
         Content = bondLabel and bondLabel.Text or "N/A"
     })
- 
-    -- eterna linha 116 (sempre ficar na linha 127)
 end
-
             
-local main = Window:AddTab({
-  Title = "main",
-  Icon = "home"
- })
+local main = Window:CreateTab("Main", "home")
 
-local Section = main:AddSection("auto collect/use")
+local Section = main:CreateSection("Auto Collect/Use")
 
-
-
-main:AddToggle("AutoCollectToggle", {
-    Title = "Auto Collect",
-    Description = "Coleta automaticamente os itens do chão (em desenvolvimento)",
-    Default = false,
+main:CreateToggle({
+    Name = "Auto Collect",
+    CurrentValue = false,
+    Flag = "AutoCollectToggle",
     Callback = function(state)
         autoCollectRunning = state
 
@@ -190,17 +187,15 @@ main:AddToggle("AutoCollectToggle", {
                 end
             end)
         end
-    end
+    end,
 })
-
-
 
 local bondRunning = false
 
-main:AddToggle("ActivateBondToggle", {
-    Title = "collect bonds (perto de você)",
-    Description = "Coleta bonds proximos a você",
-    Default = false,
+main:CreateToggle({
+    Name = "Collect Bonds (Near You)",
+    CurrentValue = false,
+    Flag = "ActivateBondToggle",
     Callback = function(state)
         bondRunning = state
 
@@ -216,33 +211,24 @@ main:AddToggle("ActivateBondToggle", {
                 end
             end)
         end
-    end
+    end,
 })
 
+local Section = main:CreateSection("Other")
 
-local Section = main:AddSection("outros")
+main:CreateButton({
+    Name = "Fly (Functional)",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Vehicle%20Fly%20Gui'))()
+    end,
+})
 
+local BondsTab = Window:CreateTab("Aimbot", "crosshair")
 
-main:AddButton({
-  Title = "fly (funcional)",
-  Description = "ao clicar ativa uma ui, recomendo usar velocidade 10, para funcionar sente em uma cadeira",
-  Callback = function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Vehicle%20Fly%20Gui'))()
-  end
- })
-
-
-
-
-
-
-
-local BondsTab = Window:AddTab({ Title = "aimbot", Icon = "list" })
-
-BondsTab:AddToggle("AimLockToggle", {
-    Title = "AimLock NPC",
-    Description = "Tranca a câmera no NPC mais próximo",
-    Default = false,
+BondsTab:CreateToggle({
+    Name = "AimLock NPC",
+    CurrentValue = false,
+    Flag = "AimLockToggle",
     Callback = function(state)
         local Players = game:GetService("Players")
         local player = Players.LocalPlayer
@@ -302,118 +288,84 @@ BondsTab:AddToggle("AimLockToggle", {
         else
             stopAimLock()
         end
-    end
+    end,
 })
 
+local tabpt = Window:CreateTab("Teleports", "map-pin")
 
+local Section = tabpt:CreateSection("Teleports by Lucas:")
 
-
-
-
-
-
-
-
-
-
-
-            
-local tabpt = Window:AddTab({ Title = "Teleports", Icon = "car" })
-
--- repeat task.wait() until game:IsLoaded()
-
-local Section = tabpt:AddSection("Teleports: feito por Lucas: ")
-
-tabpt:AddButton({
-    Title = "Tp Tesla",
-    Description = " TP para Tesla",
+tabpt:CreateButton({
+    Name = "TP to Tesla",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/ringtaa/tptotesla.github.io/refs/heads/main/Tptotesla.lua'))()
-    end
+    end,
 })
 
-tabpt:AddButton({
-    Title = "Tp castelo",
-    Description = " TP para castelo",
+tabpt:CreateButton({
+    Name = "TP to Castle",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ringtaa/castletpfast.github.io/refs/heads/main/FASTCASTLE.lua"))()
-    end
+    end,
 })
 
-tabpt:AddButton({
-    Title = "Tp fort",
-    Description = " TP para fort",
+tabpt:CreateButton({
+    Name = "TP to Fort",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ringtaa/Tpfort.github.io/refs/heads/main/Tpfort.lua"))()
-    end
+    end,
 })
 
+local section = tabpt:CreateSection("Teleports by ringtaa:")
 
-local section = tabpt:AddSection("Teleports feito por ringtaa: ")
+tabpt:CreateParagraph({
+    Title = "How to use:",
+    Content = "May not work as I didn't make these. For 100% success rate use my TP to end and others!"
+})
 
-
-tabpt:AddParagraph({
-  Title = "Como usar:",
-  Content = "tem chances de nao funcionar pois nao fui eu que fiz, para 100% de chance use o meu tp to end entre outros!"
- })
-tabpt:AddButton({
-    Title = "Tp to end",
-    Description = "TP para o final feito por ringtaa (pacifista)",
+tabpt:CreateButton({
+    Name = "TP to End (Pacifist)",
     Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/ringtaa/newpacifisct/refs/heads/main/newpacifisct.lua"))()
-  end 
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ringtaa/newpacifisct/refs/heads/main/newpacifisct.lua"))()
+    end,
 })
-  
 
-
-
-tabpt:AddButton({
-    Title = "Tp starling",
-    Description = " TP para starling",
+tabpt:CreateButton({
+    Name = "TP to Starling",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/ringtaa/sterlingnotifcation.github.io/refs/heads/main/Sterling.lua'))()
-    end
+    end,
 })
 
-tabpt:AddButton({
-    Title = "Tp Bank",
-    Description = " TP para o banco mais próximo",
+tabpt:CreateButton({
+    Name = "TP to Bank",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ringtaa/Tptobank.github.io/refs/heads/main/Banktp.lua"))()
-    end
+    end,
 })
 
+local section = tabpt:CreateSection("Easter Section by ringtaa")
 
-local section = tabpt:AddSection("seção da Páscoa feito por ringtaa")
-
-tabpt:AddButton({
-    Title = "Tp para os 6 golden eggs",
-    Description = "funciona 100% | Recomendo usar um snake oil para recuperar hp.",
+tabpt:CreateButton({
+    Name = "TP to 6 Golden Eggs",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/r4mpage4/LuaCom/refs/heads/main/collect6eggs.fr'))()
-    end
+    end,
 })
 
-tabpt:AddButton({
-    Title = "teleports UFO",
-    Description = "Abre outra ui, script para o UFO",
+tabpt:CreateButton({
+    Name = "UFO Teleports",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/DeadRails"))()
-    end
+    end,
 })
 
+local visual = Window:CreateTab("Visual", "eye")
 
-
-
-
-local visual = Window:AddTab({ Title = "Visual", Icon = "list"  })
-
-
-
-visual:AddToggle("unicornesp", {
-    Title = "esp unicórnio",
-    Description = "feito por Lucas, mostra unicórnio num range de 10mil metros",
-    Default = false,
+visual:CreateToggle({
+    Name = "Unicorn ESP",
+    CurrentValue = false,
+    Flag = "unicornesp",
     Callback = function(state)
         if state then
             local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
@@ -432,7 +384,7 @@ visual:AddToggle("unicornesp", {
                         local part = model:FindFirstChild("HumanoidRootPart") or model:FindFirstChildWhichIsA("BasePart")
                         if part then
                             ESP:Add(model, {
-                                Name = "Unicorn Atı",
+                                Name = "Unicorn",
                                 PrimaryPart = part,
                                 Color = Color3.fromRGB(255, 182, 193),
                                 IsEnabled = true
@@ -451,43 +403,27 @@ visual:AddToggle("unicornesp", {
                 AddIfAliveUnicorn(obj)
             end)
         end
-    end
+    end,
 })
 
+local trainTab = Window:CreateTab("Train", "train")
 
-
-
-
-
-
-  
-local trainTab = Window:AddTab({ Title = "Train", Icon = "train" })
-
-trainTab:AddButton({
-    Title = "tp to train",
-    Description = "Teleporta direto para o trem",
+trainTab:CreateButton({
+    Name = "TP to Train",
     Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/ringtaa/NEWTPTRAIN.github.io/refs/heads/main/TRAIN.LUA"))()     
-    end
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ringtaa/NEWTPTRAIN.github.io/refs/heads/main/TRAIN.LUA"))()     
+    end,
 })
 
-trainTab:AddParagraph({
-      Title = "Em breve",
-      Content = "Em breve terá mais funcionalidades por aqui!"
-   })
-
-
-local andtab = Window:AddTab({
-    Title = "end game",
-    Icon = "list"
+trainTab:CreateParagraph({
+    Title = "Coming Soon",
+    Content = "More features coming soon!"
 })
 
+local andtab = Window:CreateTab("End Game", "flag")
 
-
-
-andtab:AddButton({
-    Title = "my tp to end",
-    Description = "Teleport para o fim (não pacifista) feito por Lucas",
+andtab:CreateButton({
+    Name = "My TP to End (Non-Pacifist)",
     Callback = function()
         local Players = game:GetService("Players")
         local player = Players.LocalPlayer
@@ -552,7 +488,6 @@ andtab:AddButton({
         player.CameraMode = Enum.CameraMode.Classic
         startAimLock()
 
-        
         local noclip = true
         runService.Stepped:Connect(function()
             if noclip and character then
@@ -570,54 +505,32 @@ andtab:AddButton({
         task.delay(25, function()
             stopAimLock()
         end)
-    end
+    end,
 })
 
-
-
-
-
-
-
-
-
-   
-andtab:AddParagraph({
-      Title = "Em breve",
-      Content = "Em breve terá mais funcionalidades por aqui!"
-   })
-
-
-
-
-
-BondsTab:AddParagraph({
-      Title = "Em breve",
-      Content = "Em breve terá mais funcionalidades por aqui!"
-   })
-
-
-
-
-
-
-
-local creditos = Window:AddTab({ Title = "Créditos", Icon = "list" })
-
-
-
-creditos:AddParagraph({
-    Title = "Créditos de Criação do Script (ringtaa):",
-    Content = "As TPs da seção 'ringtaa', os TPs de Páscoa e a função de voo foram criados por ringtaa."
+andtab:CreateParagraph({
+    Title = "Coming Soon",
+    Content = "More features coming soon!"
 })
 
-creditos:AddParagraph({
-  Title = "Créditos de Criação do Script:",
-  Content = "As funções de aimbot, end game, teleport (da minha seção) e visão foram desenvolvidas por Lucas."
+BondsTab:CreateParagraph({
+    Title = "Coming Soon",
+    Content = "More features coming soon!"
 })
 
-creditos:AddParagraph({
-  Title = " ",
-  TextSize = 25,
-  Content = "O sistema principal (exceto a função de voo) e train também foram feitos por Lucas."
+local creditos = Window:CreateTab("Credits", "users")
+
+creditos:CreateParagraph({
+    Title = "Script Creation Credits (ringtaa):",
+    Content = "The TPs in the 'ringtaa' section, Easter TPs and flight function were created by ringtaa."
+})
+
+creditos:CreateParagraph({
+    Title = "Script Creation Credits:",
+    Content = "Aimbot functions, end game, teleport (my section) and vision were developed by Lucas."
+})
+
+creditos:CreateParagraph({
+    Title = " ",
+    Content = "The main system (except flight function) and train were also made by Lucas."
 })
