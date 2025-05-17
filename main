@@ -1,11 +1,11 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "AstralHub ⤙v1.3⤚",
+   Name = "𓆩 𝘈𝘴𝘵𝘳𝘢𝘭𝘏𝘶𝘣 𓆪 ⤙v1.3⤚",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "V1.3 — Private Version",
    LoadingSubtitle = "by GhosttedXV",
-   Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Serenity", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -24,22 +24,22 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "AstralHub - KEY SYSTEM",
-      Subtitle = "AstralHub by GhosttedXV",
+      Title = "𝘈𝘴𝘵𝘳𝘢𝘭𝘏𝘶𝘣 - KEY SYSTEM",
+      Subtitle = "𝘈𝘴𝘵𝘳𝘢𝘭𝘏𝘶𝘣 by GhosttedXV",
       Note = "KEY: AstronomyBackwards", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      FileName = "AstraHubKEY-ZXAQ", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"AstronomyBackwards"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
 -- TAB & SECTION
-local HomeTab = Window:CreateTab("Home", "house")
-local AutoFarmTab = Window:CreateTab("Auto Farm", "zap")
-local PlayerTab = Window:CreateTab("Player", "users")
-local VisualTab = Window:CreateTab("Visual", "eye")
-local UtilityTab = Window:CreateTab("Utility", "layers-2")
+local HomeTab = Window:CreateTab("Home", "rewind")
+local AutoFarmTab = Window:CreateTab("Auto Farm", "rewind")
+local PlayerTab = Window:CreateTab("Player", "rewind")
+local VisualTab = Window:CreateTab("Visual", "rewind")
+local UtilityTab = Window:CreateTab("Utility", "rewind")
 
 -- NOTIFICATION
 
@@ -76,16 +76,3 @@ local Button = HomeTab:CreateButton({
        })
    end,
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
