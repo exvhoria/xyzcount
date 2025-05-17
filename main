@@ -1,12 +1,816 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-]]--
+local Window = Rayfield:CreateWindow({
+   Name = "𓆩 AstralHub 𓆪 || V1.3",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "V1.3 — Private Version",
+   LoadingSubtitle = "by GhosttedXV",
+   Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
-local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function() return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...) local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30) if (v1(v30,2)==81) then local v85=0;while true do if (v85==0) then v19=v0(v3(v30,1,1));return "";end end else local v86=v2(v0(v30,16));if v19 then local v111=0;local v112;while true do if (v111==1) then return v112;end if (v111==0) then v112=v5(v86,v19);v19=nil;v111=1;end end else return v86;end end end);local function v20(v31,v32,v33) if v33 then local v87=0;local v88;while true do if (v87==(0 -(0 + 0))) then v88=(v31/((5 -3)^(v32-(1 -0))))%(2^(((v33-(2 -1)) -(v32-1)) + (620 -(555 + 64)))) ;return v88-(v88%(932 -(857 + 74))) ;end end else local v89=(570 -((1244 -(282 + 595)) + 201))^(v32-(928 -((1851 -(1523 + 114)) + 713))) ;return (((v31%(v89 + v89))>=v89) and (1 + 0)) or 0 ;end end local function v21() local v34=v1(v16,v18,v18);v18=v18 + 1 ;return v34;end local function v22() local v35=0 + 0 ;local v36;local v37;while true do if (v35==(1 -0)) then return (v37 * (251 + 5)) + v36 ;end if (v35==0) then v36,v37=v1(v16,v18,v18 + (1067 -(68 + 222 + 775)) );v18=v18 + 2 ;v35=1271 -(226 + 1044) ;end end end local function v23() local v38,v39,v40,v41=v1(v16,v18,v18 + (960 -(892 + (415 -(87 + 263)))) );v18=v18 + (9 -5) ;return (v41 * (31011612 -14234396)) + (v40 * (120312 -(54956 -(67 + 113)))) + (v39 * 256) + v38 ;end local function v24() local v42=v23();local v43=v23();local v44=1 + 0 ;local v45=(v20(v43,1 + 0 + 0 ,(178 -129) -29 ) * (((10 -7) -1)^(32 + 0))) + v42 ;local v46=v20(v43,812 -(368 + 423) ,97 -66 );local v47=((v20(v43,24 + 8 )==(3 -2)) and  -(953 -(802 + 150))) or (2 -1) ;if (v46==(0 -0)) then if (v45==(0 + 0)) then return v47 * (997 -(915 + 82)) ;else local v113=438 -(145 + 293) ;while true do if (v113==(430 -(44 + 386))) then v46=1487 -(998 + 488) ;v44=0 + 0 ;break;end end end elseif (v46==(5796 -3749)) then return ((v45==(0 + 0)) and (v47 * ((1 -0)/((2046 -(814 + 45)) -(1069 + (290 -172)))))) or (v47 * NaN) ;end return v8(v47,v46-(2161 -(116 + 1022)) ) * (v44 + (v45/(((1 + 3) -2)^(113 -61)))) ;end local function v25(v48) local v49=(1913 -(1789 + 124)) + 0 ;local v50;local v51;while true do if (v49==3) then return v6(v51);end if (v49==(885 -(261 + 624))) then v50=nil;if  not v48 then v48=v23();if (v48==(0 -(766 -(745 + 21)))) then return "";end end v49=1081 -(1020 + 60) ;end if (v49==((491 + 934) -(630 + 793))) then v51={};for v114=3 -2 , #v50 do v51[v114]=v2(v1(v3(v50,v114,v114)));end v49=14 -11 ;end if (v49==(1 + 0)) then v50=v3(v16,v18,(v18 + v48) -(3 -(5 -3)) );v18=v18 + v48 ;v49=(6860 -5111) -(760 + 9 + 978) ;end end end local v26=v23;local function v27(...) return {...},v12("#",...);end local function v28() local v52=(function() return function(v90,v91,v92,v93,v94,v95,v96,v97) local v90=(function() return 0 -0 ;end)();local v91=(function() return;end)();local v92=(function() return;end)();while true do if (v90== #" ") then if (v91== #"!") then v92=(function() return v93()~=0 ;end)();elseif (v91==2) then v92=(function() return v94();end)();elseif (v91~= #"nil") then else v92=(function() return v95();end)();end v96[v97]=(function() return v92;end)();break;end if (v90~=(1763 -(454 + 1309))) then else local v121=(function() return 0 + 0 ;end)();local v122=(function() return;end)();while true do if (v121==(0 -0)) then v122=(function() return 0 -0 ;end)();while true do if (v122~=(2 -1)) then else v90=(function() return  #"<";end)();break;end if (v122~=(285 -(134 + 151))) then else v91=(function() return v93();end)();v92=(function() return nil;end)();v122=(function() return 1;end)();end end break;end end end end return v90,v91,v92,v93,v94,v95,v96,v97;end;end)();local v53=(function() return function(v98,v99,v100) local v101=(function() return 1665 -(970 + 695) ;end)();local v102=(function() return;end)();while true do if (v101==(0 -0)) then v102=(function() return 1990 -(582 + 1408) ;end)();while true do if (v102==0) then v98[v99-#":" ]=(function() return v100();end)();return v98,v99,v100;end end break;end end end;end)();local v54=(function() return {};end)();local v55=(function() return {};end)();local v56=(function() return {};end)();local v57=(function() return {v54,v55,nil,v56};end)();local v58=(function() return v23();end)();local v59=(function() return {};end)();for v67= #"{",v58 do FlatIdent_7126A,Type,Cons,v21,v24,v25,v59,v67=(function() return v52(FlatIdent_7126A,Type,Cons,v21,v24,v25,v59,v67);end)();end v57[ #"xxx"]=(function() return v21();end)();for v68= #":",v23() do local v69=(function() return v21();end)();if (v20(v69, #"}", #">")==(0 -0)) then local v106=(function() return 0 -0 ;end)();local v107=(function() return;end)();local v108=(function() return;end)();local v109=(function() return;end)();local v110=(function() return;end)();while true do if (1==v106) then local v123=(function() return 1824 -(1195 + 629) ;end)();while true do if (v123~=0) then else v109=(function() return nil;end)();v110=(function() return nil;end)();v123=(function() return 1;end)();end if (v123==(1 -0)) then v106=(function() return 2;end)();break;end end end if (v106~=2) then else while true do if (v107~=0) then else local v125=(function() return 0;end)();local v126=(function() return;end)();while true do if (v125==0) then v126=(function() return 241 -(187 + 54) ;end)();while true do if (1~=v126) then else v107=(function() return  #":";end)();break;end if ((780 -(162 + 618))==v126) then v108=(function() return v20(v69,2 + 0 , #"asd");end)();v109=(function() return v20(v69, #"?id=",6);end)();v126=(function() return 1;end)();end end break;end end end if ( #"91("==v107) then if (v20(v109, #"asd", #"19(")== #"~") then v110[ #".dev"]=(function() return v59[v110[ #"0836"]];end)();end v54[v68]=(function() return v110;end)();break;end if (v107==2) then local v128=(function() return 0 + 0 ;end)();while true do if (v128~=0) then else if (v20(v109, #"/", #"}")~= #"|") then else v110[3 -1 ]=(function() return v59[v110[2 -0 ]];end)();end if (v20(v109,1 + 1 ,1638 -(1373 + 263) )== #":") then v110[ #"asd"]=(function() return v59[v110[ #"xnx"]];end)();end v128=(function() return 1001 -(451 + 549) ;end)();end if (v128~=(1 + 0)) then else v107=(function() return  #"91(";end)();break;end end end if (v107~= #"[") then else local v129=(function() return 0;end)();local v130=(function() return;end)();while true do if (v129~=0) then else v130=(function() return 0;end)();while true do if (v130==(1 -0)) then v107=(function() return 2;end)();break;end if (v130==0) then v110=(function() return {v22(),v22(),nil,nil};end)();if (v108==0) then local v330=(function() return 0 -0 ;end)();local v331=(function() return;end)();while true do if (v330~=(1384 -(746 + 638))) then else v331=(function() return 0 + 0 ;end)();while true do if (v331==0) then v110[ #"xnx"]=(function() return v22();end)();v110[ #"asd1"]=(function() return v22();end)();break;end end break;end end elseif (v108== #"\\") then v110[ #"asd"]=(function() return v23();end)();elseif (v108==2) then v110[ #"91("]=(function() return v23() -((2 -0)^(357 -(218 + 123))) ;end)();elseif (v108== #"-19") then local v347=(function() return 0;end)();local v348=(function() return;end)();while true do if (v347==0) then v348=(function() return 1581 -(1535 + 46) ;end)();while true do if (v348~=(0 + 0)) then else v110[ #"gha"]=(function() return v23() -((1 + 1)^(576 -(306 + 254))) ;end)();v110[ #"?id="]=(function() return v22();end)();break;end end break;end end end v130=(function() return 1 + 0 ;end)();end end break;end end end end break;end if (v106==(0 -0)) then v107=(function() return 0;end)();v108=(function() return nil;end)();v106=(function() return 1;end)();end end end end for v70= #"<",v23() do v55,v70,v28=(function() return v53(v55,v70,v28);end)();end return v57;end local function v29(v61,v62,v63) local v64=v61[(1377 + 91) -(899 + 568) ];local v65=v61[2];local v66=v61[3];return function(...) local v71=v64;local v72=v65;local v73=v66;local v74=v27;local v75=1 + 0 ;local v76= -(2 -1);local v77={};local v78={...};local v79=v12("#",...) -1 ;local v80={};local v81={};for v103=290 -(60 + 230) ,v79 do if (v103>=v73) then v77[v103-v73 ]=v78[v103 + 1 ];else v81[v103]=v78[v103 + (573 -(426 + 118 + 28)) ];end end local v82=(v79-v73) + 1 + 0 + 0 ;local v83;local v84;while true do v83=v71[v75];v84=v83[1457 -(282 + 1174) ];if (v84<=14) then if ((2705==2705) and (v84<=6)) then if (v84<=((2802 -1989) -(569 + 242))) then if ((61==61) and (v84<=(0 -0))) then v81[v83[2]]={};elseif (v84==1) then local v133=v83[2];local v134,v135=v74(v81[v133](v13(v81,v133 + 1 ,v76)));v76=(v135 + v133) -1 ;local v136=0;for v249=v133,v76 do v136=v136 + 1 ;v81[v249]=v134[v136];end else v81[v83[1 + 1 ]]=v83[3];end elseif ((507==507) and (v84<=(1028 -(706 + 318)))) then if (v84==(1254 -(721 + 530))) then v81[v83[2]]= #v81[v83[3]];else do return;end end elseif (v84>5) then local v140=1271 -(945 + 326) ;local v141;local v142;local v143;while true do if ((v140==0) or (699>=1296)) then v141=v83[4 -(2 + 0) ];v142=v81[v141 + 2 ];v140=1 + 0 ;end if ((240<=3165) and (v140==((1172 -(381 + 89)) -(241 + 30 + 429)))) then if ((834>=805) and (v142>(0 + 0))) then if ((v143<=v81[v141 + (1501 -(1408 + 92)) ]) or (3812<2316)) then v75=v83[1089 -(461 + 625) ];v81[v141 + (1291 -(672 + 321 + 295)) ]=v143;end elseif ((v143>=v81[v141 + 1 + 0 ]) or (2652<=1533) or (1783>=3616)) then local v335=1171 -(418 + 753) ;while true do if (v335==(0 + 0)) then v75=v83[1 + (2 -0) ];v81[v141 + 1 + 2 ]=v143;break;end end end break;end if (v140==((1157 -(1074 + 82)) + 0)) then v143=v81[v141] + v142 ;v81[v141]=v143;v140=531 -(406 + 123) ;end end else local v144=1769 -((3832 -2083) + 20) ;local v145;local v146;local v147;local v148;while true do if (v144==2) then for v317=v145,v76 do local v318=0;while true do if (v318==(0 + 0)) then v148=v148 + (1323 -((3033 -(214 + 1570)) + 73)) ;v81[v317]=v146[v148];break;end end end break;end if (v144==(0 + 0)) then v145=v83[1147 -(466 + 679) ];v146,v147=v74(v81[v145](v13(v81,v145 + (2 -1) ,v83[8 -5 ])));v144=1456 -(990 + 465) ;end if (v144==(1901 -(106 + 1794))) then v76=(v147 + v145) -(1 + 0) ;v148=0 + 0 ;v144=5 -3 ;end end end elseif (v84<=(27 -17)) then if (v84<=(122 -(4 + 110))) then if ((v84==7) or (3598<1460) or (3913>4527)) then local v149=v83[1 + 1 ];do return v81[v149](v13(v81,v149 + (585 -(57 + 527)) ,v83[1430 -(18 + 23 + 1386) ]));end else local v150=103 -(17 + 86) ;local v151;while true do if ((4376>817) and ((v150==0) or (4116<1192))) then v151=v83[2 + 0 ];v81[v151](v81[v151 + (1 -0) ]);break;end end end elseif (v84>9) then v81[v83[5 -3 ]]=v81[v83[169 -(122 + 44) ]]%v83[4] ;else v81[v83[2 -0 ]]=v63[v83[9 -6 ]];end elseif (v84<=(10 + 2)) then if (v84==(2 + 9)) then v81[v83[3 -1 ]]=v81[v83[68 -(30 + 35) ]][v83[4]];else v81[v83[2 + 0 ]]={};v75=v75 + ((1224 + 34) -(1043 + 214)) ;v83=v71[v75];v81[v83[(27 -20) -5 ]]=v63[v83[1215 -(323 + 889) ]];v75=v75 + (2 -1) ;v83=v71[v75];v81[v83[(2308 -(1668 + 58)) -(361 + 219) ]]=v81[v83[323 -(53 + 267) ]][v83[1 + 3 ]];v75=v75 + ((1040 -(512 + 114)) -(15 + 398)) ;v83=v71[v75];v81[v83[984 -(18 + (2513 -1549)) ]]=v63[v83[3]];v75=v75 + ((5 -2) -2) ;v83=v71[v75];v81[v83[2]]=v81[v83[2 + 1 ]][v83[3 + 1 ]];v75=v75 + ((2961 -2110) -(20 + 830)) ;v83=v71[v75];v81[v83[2]]=v63[v83[3 + 0 ]];v75=v75 + (127 -(116 + 10)) ;v83=v71[v75];v81[v83[2]]=v81[v83[1 + 0 + 2 ]][v83[742 -(542 + 196) ]];v75=v75 + ((1 + 0) -0) ;v83=v71[v75];v81[v83[2]]=v63[v83[3]];v75=v75 + 1 + 0 ;v83=v71[v75];if ((4861>824) and  not v81[v83[2 + 0 ]]) then v75=v75 + 1 ;else v75=v83[2 + 1 + 0 ];end end elseif (v84>(33 -(67 -47))) then local v169=0 -0 ;local v170;while true do if ((v169==(1551 -(1126 + 425))) or (3377<=903)) then v170=v83[407 -(118 + 287) ];v81[v170]=v81[v170](v13(v81,v170 + ((1997 -(109 + 1885)) -(1471 -(1269 + 200))) ,v76));break;end end else local v171=1121 -(118 + 1003) ;local v172;while true do if ((3976>=439) and (v171==((9 -4) -3))) then v83=v71[v75];v81[v83[379 -(142 + 235) ]]=v83[13 -10 ];v75=v75 + 1 + 0 ;v171=980 -(553 + 424) ;end if (v171==(10 -4)) then v75=v75 + 1 + 0 ;v83=v71[v75];v81[v83[2 + 0 ]]=v81[v83[2 + 1 ]][v83[2 + 2 ]];v171=4 + 3 ;end if (v171==(0 -0)) then v172=nil;v81[v83[5 -3 ]]=v81[v83[6 -3 ]];v75=v75 + 1 ;v171=1 + 0 ;end if (v171==(19 -15)) then v75=v75 + (754 -(239 + 514)) ;v83=v71[v75];v81[v83[1 + 1 ]][v83[3]]=v81[v83[1333 -(797 + 532) ]];v171=4 + 1 ;end if (v171==(2 + 1)) then v83=v71[v75];v172=v83[4 -(817 -(98 + 717)) ];v81[v172]=v81[v172](v13(v81,v172 + (1203 -(373 + 829)) ,v83[734 -((1302 -(802 + 24)) + 255) ]));v171=1134 -(369 + (1312 -551)) ;end if ((5==v171) or (1383>=2131)) then v75=v75 + (1 -0) + 0 ;v83=v71[v75];v81[v83[2 -0 ]]=v63[v83[3]];v171=10 -4 ;end if (v171==(239 -(64 + 174))) then v83=v71[v75];v81[v83[1 + 1 ]]=v83[3 -0 ];v75=v75 + 1 ;v171=2;end if (v171==(344 -(144 + 192))) then v81[v172](v81[v172 + (217 -(42 + 174)) ]);v75=v75 + 1 + 0 ;v83=v71[v75];v171=8 + 1 ;end if ((3752==3752) and (v171==(4 + 5))) then do return;end break;end if ((v171==7) or (1876>=2541)) then v75=v75 + (1505 -(363 + 1141)) ;v83=v71[v75];v172=v83[1582 -(1183 + 59 + 338) ];v171=8;end end end elseif (v84<=(66 -(34 + 10))) then if ((1782<=3772) and (4046>2695) and (v84<=(14 + 4))) then if ((v84<=(12 + 4)) or (4700<813)) then if (v84==(3 + 12)) then local v173;local v174,v175;local v176;v81[v83[1977 -(1913 + 62) ]]=v81[v83[2 + 1 ]];v75=v75 + ((1 + 1) -1) ;v83=v71[v75];v81[v83[1935 -(565 + 1368) ]]=v62[v83[11 -(22 -14) ]];v75=v75 + 1 ;v83=v71[v75];v81[v83[(5545 -3882) -(1477 + 184) ]]=v62[v83[3 -0 ]];v75=v75 + 1 + 0 + 0 ;v83=v71[v75];v81[v83[858 -(564 + 292) ]]=v62[v83[(2 + 2) -1 ]];v75=v75 + (2 -(1 + 0)) ;v83=v71[v75];v81[v83[306 -(244 + 60) ]]=v62[v83[3]];v75=v75 + 1 + 0 ;v83=v71[v75];v81[v83[(348 + 130) -(41 + 435) ]]=v81[v83[3]];v75=v75 + (1002 -(938 + 30 + 33)) ;v83=v71[v75];v81[v83[2 + 0 ]]=v81[v83[1128 -(936 + 189) ]];v75=v75 + 1 + 0 ;v83=v71[v75];v81[v83[1615 -(1565 + 48) ]]=v81[v83[(1435 -(797 + 636)) + 1 ]] + v83[1142 -(782 + 356) ] ;v75=v75 + (268 -(176 + (441 -350))) ;v83=v71[v75];v176=v83[(1623 -(1427 + 192)) -2 ];v174,v175=v74(v81[v176](v13(v81,v176 + (1 -0) ,v83[3])));v76=(v175 + v176) -(1093 -(975 + 117)) ;v173=(650 + 1225) -(157 + 1718) ;for v252=v176,v76 do local v253=0 + 0 ;while true do if ((3199<4050) and ((0 -0)==v253)) then v173=v173 + (3 -2) ;v81[v252]=v174[v173];break;end end end v75=v75 + 1 ;v83=v71[v75];v176=v83[1020 -(697 + 321) ];v81[v176]=v81[v176](v13(v81,v176 + (2 -1) ,v76));v75=v75 + (1 -(0 -0)) ;v83=v71[v75];v81[v83[4 -2 ]]=v62[v83[3]];v75=v75 + 1 + 0 + 0 ;v83=v71[v75];v81[v83[3 -1 ]]=v62[v83[7 -4 ]];v75=v75 + ((557 + 671) -(322 + (1231 -(192 + 134)))) ;v83=v71[v75];v81[v83[2]]=v81[v83[(1890 -(316 + 960)) -(602 + 9) ]];v75=v75 + 1 ;v83=v71[v75];v81[v83[1191 -(449 + 740) ]]= #v81[v83[3]];v75=v75 + (873 -(826 + 46)) ;v83=v71[v75];v81[v83[949 -(245 + 702) ]]=v81[v83[9 -6 ]]%v81[v83[2 + 2 + 0 ]] ;v75=v75 + (1899 -(201 + 59 + 1638)) ;v83=v71[v75];v81[v83[442 -(382 + 58) ]]=v83[9 -6 ] + v81[v83[4 + 0 ]] ;v75=v75 + ((1 + 0) -0) ;v83=v71[v75];v81[v83[5 -(11 -8) ]]= #v81[v83[1208 -(902 + 303) ]];v75=v75 + (1 -0) ;v83=v71[v75];v81[v83[4 -2 ]]=v81[v83[1 + 2 ]]%v81[v83[1694 -(1121 + 569) ]] ;v75=v75 + ((766 -(83 + 468)) -(22 + 192)) ;v83=v71[v75];v81[v83[2]]=v83[3] + v81[v83[4]] ;v75=v75 + 1 ;v83=v71[v75];v81[v83[685 -(483 + 200) ]]=v81[v83[1809 -(1202 + 604) ]] + v83[4] ;v75=v75 + (1464 -(1404 + (275 -216))) ;v83=v71[v75];v176=v83[5 -3 ];v174,v175=v74(v81[v176](v13(v81,v176 + (1 -0) ,v83[768 -(468 + 297) ])));v76=(v175 + v176) -(563 -(334 + 228)) ;v173=0 -0 ;for v254=v176,v76 do local v255=0 -0 ;while true do if (v255==(0 -0)) then v173=v173 + 1 + 0 ;v81[v254]=v174[v173];break;end end end v75=v75 + (237 -(141 + 95)) ;v83=v71[v75];v176=v83[2 + 0 ];v174,v175=v74(v81[v176](v13(v81,v176 + 1 ,v76)));v76=(v175 + v176) -(2 -1) ;v173=(0 -0) -0 ;for v256=v176,v76 do v173=v173 + 1 + 0 ;v81[v256]=v174[v173];end v75=v75 + (2 -1) ;v83=v71[v75];v176=v83[2 + 0 ];v81[v176]=v81[v176](v13(v81,v176 + 1 + 0 ,v76));v75=v75 + 1 ;v83=v71[v75];v81[v83[2 -0 ]]=v81[v83[2 + 1 ]]%v83[167 -(92 + 71) ] ;v75=v75 + 1 + (0 -0) ;v83=v71[v75];v176=v83[2 -0 ];v174,v175=v74(v81[v176](v81[v176 + 1 ]));v76=(v175 + v176) -((1091 -(45 + 280)) -(574 + 191)) ;v173=0 + 0 ;for v259=v176,v76 do v173=v173 + 1 ;v81[v259]=v174[v173];end v75=v75 + (2 -1) ;v83=v71[v75];v176=v83[2 + 0 ];v81[v176](v13(v81,v176 + 1 ,v76));else local v210=v83[851 -(254 + 595) ];v81[v210](v13(v81,v210 + (127 -(55 + 71)) ,v76));end elseif (v84>17) then local v211=v72[v83[(3 + 0) -(0 + 0) ]];local v212;local v213={};v212=v10({},{__index=function(v262,v263) local v264=1790 -(573 + 1217) ;local v265;while true do if (v264==(0 + 0)) then v265=v213[v263];return v265[2 -1 ][v265[1 + 1 ]];end end end,__newindex=function(v266,v267,v268) local v269=0 -0 ;local v270;while true do if (v269==(939 -(714 + 225))) then v270=v213[v267];v270[2 -1 ][v270[2]]=v268;break;end end end});for v271=1,v83[5 -1 ] do v75=v75 + 1 + 0 + 0 ;local v272=v71[v75];if ((v272[1 -0 ]==(831 -((218 -100) + 688))) or (3545==3197)) then v213[v271-(49 -(25 + 23)) ]={v81,v272[1 + 2 ]};else v213[v271-1 ]={v62,v272[735 -(16 + 716) ]};end v80[ #v80 + (1 -0) ]=v213;end v81[v83[99 -(11 + 86) ]]=v29(v211,v212,v63);else local v215;local v216;local v217;v81[v83[2]]={};v75=v75 + (2 -1) ;v83=v71[v75];v81[v83[287 -(175 + 110) ]]=v83[6 -3 ];v75=v75 + (4 -3) ;v83=v71[v75];v81[v83[1798 -(503 + 1293) ]]= #v81[v83[8 -5 ]];v75=v75 + 1 + 0 + 0 ;v83=v71[v75];v81[v83[2]]=v83[1064 -((2582 -(1733 + 39)) + 251) ];v75=v75 + 1 ;v83=v71[v75];v217=v83[2 + 0 ];v216=v81[v217];v215=v81[v217 + 2 ];if ((v215>0) or (4951<4430)) then if (v216>v81[v217 + 1 ]) then v75=v83[1 + 2 ];else v81[v217 + 3 ]=v216;end elseif (v216<v81[v217 + 1 + 0 ]) then v75=v83[536 -(43 + 490) ];else v81[v217 + (736 -(711 + 22)) ]=v216;end end elseif (v84<=(77 -57)) then if ((2394>373) and (v84>((2412 -1534) -(240 + 619)))) then v81[v83[1 + 1 ]]=v81[v83[4 -1 ]] + v83[(1035 -(125 + 909)) + 3 ] ;else local v228=v83[1746 -(1344 + 400) ];local v229,v230=v74(v81[v228](v81[v228 + (406 -(255 + 150)) ]));v76=(v230 + v228) -1 ;local v231=0 + (1948 -(1096 + 852)) ;for v274=v228,v76 do v231=v231 + 1 + 0 + 0 ;v81[v274]=v229[v231];end end elseif ((96==96) and (v84>(89 -68))) then v81[v83[6 -4 ]]=v81[v83[1742 -(404 + 1335) ]]%v81[v83[(585 -175) -(183 + 223) ]] ;else local v233=0 -0 ;local v234;while true do if (((0 + 0 + 0)==v233) or (2739>4008)) then v234=v83[1 + 1 ];do return v13(v81,v234,v76);end break;end end end elseif (((4155<=4232) and (v84<=(363 -(10 + 327)))) or (23==1134)) then if (v84<=24) then if ((v84>(17 + 6)) or (3581==3473)) then v81[v83[(852 -(409 + 103)) -(118 + 220) ]]=v62[v83[1 + 2 ]];else local v237=449 -(108 + 341) ;local v238;local v239;local v240;while true do if ((4995>3348) and ((0 + (236 -(46 + 190)))==v237)) then v238=v83[8 -6 ];v239=v81[v238];v237=1494 -(711 + 782) ;end if (v237==(1 -0)) then v240=v81[v238 + (471 -(270 + 199)) ];if (v240>0) then if ((v239>v81[v238 + 1 + 0 ]) or (754>3724) or (2693>=4111)) then v75=v83[(1917 -(51 + 44)) -(580 + 1239) ];else v81[v238 + (8 -5) ]=v239;end elseif (v239<v81[v238 + 1 ]) then v75=v83[3];else v81[v238 + 3 + 0 ]=v239;end break;end end end elseif (v84==(1 + 24)) then v81[v83[1 + 1 ]]=v81[v83[7 -4 ]];else local v243=v83[2 + 0 + 0 ];v81[v243]=v81[v243](v13(v81,v243 + (1168 -(645 + 522)) ,v83[3]));end elseif (v84<=(1818 -(1010 + 780))) then if (v84==27) then if ((217>=57) and  not v81[v83[(1319 -(1114 + 203)) + 0 ]]) then v75=v75 + (4 -3) ;else v75=v83[8 -5 ];end else v81[v83[1838 -(1045 + 791) ]]=v83[(733 -(228 + 498)) -4 ] + v81[v83[(2 + 3) -1 ]] ;end elseif ((v84==(534 -(351 + 154))) or (2070>=4037)) then v75=v83[3];else v81[v83[1576 -(708 + 573 + (956 -(174 + 489))) ]][v83[269 -(28 + 238) ]]=v81[v83[8 -4 ]];end v75=v75 + (1560 -(1381 + (463 -285))) ;end end;end return v29(v28(),{},v17)(...);end return v15("LOL!0E3Q0003063Q00737472696E6703043Q006368617203043Q00627974652Q033Q0073756203053Q0062697433322Q033Q0062697403043Q0062786F7203053Q007461626C6503063Q00636F6E63617403063Q00696E73657274028Q00030B3Q00FFCC9B1CE9AE871ADECDCF03083Q007EB1A3BB4586DBA703053Q007072696E7400204Q000C7Q00122Q000100013Q00202Q00010001000200122Q000200013Q00202Q00020002000300122Q000300013Q00202Q00030003000400122Q000400053Q00062Q0004000B0001000100041D3Q000B0001001209000400063Q00200B000500040007001209000600083Q00200B000600060009001209000700083Q00200B00070007000A00061200083Q000100062Q00193Q00074Q00193Q00014Q00193Q00054Q00193Q00024Q00193Q00034Q00193Q00064Q000D000900083Q00122Q000A000C3Q00122Q000B000D6Q0009000B000200104Q000B000900122Q0009000E3Q00202Q000A3Q000B4Q0009000200016Q00013Q00013Q00023Q00026Q00F03F026Q00704002264Q001100025Q00122Q000300016Q00045Q00122Q000500013Q00042Q0003002100012Q001800076Q000F000800026Q000900016Q000A00026Q000B00036Q000C00046Q000D8Q000E00063Q00202Q000F000600014Q000C000F6Q000B3Q00024Q000C00036Q000D00046Q000E00016Q000F00016Q000F0006000F00102Q000F0001000F4Q001000016Q00100006001000102Q00100001001000202Q0010001000014Q000D00106Q000C8Q000A3Q000200202Q000A000A00024Q0009000A6Q00073Q00010004060003000500012Q0018000300054Q0019000400024Q0007000300044Q001500036Q00043Q00017Q00",v9(),...);
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "AstralHub - KEY SYSTEM",
+      Subtitle = "AstralHub by GhosttedXV",
+      Note = "KEY: AstronomyBackwards", -- Use this to tell the user how to get a key
+      FileName = "AstraHubKEY-ZXAQ", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"AstronomyBackwards"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+-- TAB & SECTION
+local HomeTab = Window:CreateTab("Home", "home")
+local AutoFarmTab = Window:CreateTab("Auto Farm", "swords")
+local UtilityTab = Window:CreateTab("Utility", "layers")
+local AimbotTab = Window:CreateTab("Aimbot", "Crosshair")
+local BringsTab = Window:CreateTab("Brings", "Package")
+local ESPTab = Window:CreateTab("ESP", "Eye")
+local FPSTAB = Window:CreateTab("FPS Boost", "arrow-big-up")
+local MovementTab = Window:CreateTab("Movement", "User")
+local TACTab = Window:CreateTab("Team and Credit", "app-window-mac")
+
+-- LOCAL INFORMATION
+local alreadyBypassed = false
+
+-- Services
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Cam = workspace.CurrentCamera
+local UserInputService = game:GetService("UserInputService")
+local rs = game:GetService("ReplicatedStorage")
+local plr = LocalPlayer
+
+-- Aimbot Variables
+local validNPCs = {}
+local raycastParams = RaycastParams.new()
+raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+local fovCircle = Drawing.new("Circle")
+fovCircle.Visible = false
+fovCircle.Thickness = 1
+fovCircle.Color = Color3.new(1, 1, 1)
+fovCircle.Transparency = 1
+fovCircle.Filled = false
+local fovRadius = 100
+local aimbotEnabled = false
+local aimbotKey = Enum.UserInputType.MouseButton2
+
+-- ESP Variables
+local ESPHandles = {}
+local ESPEnabled = false
+local ESPPlayerEnabled = false
+local ESPZombyEnabled = false
+local ESPColor = Color3.fromRGB(255, 0, 0)
+
+-- Movement Variables
+local speedHackEnabled = false
+local speedValue = 16
+local jumpHackEnabled = false
+local jumpMultiplier = 1.5
+local noClipEnabled = false
+local infiniteJumpEnabled = false
+local flyEnabled = false
+
+-- Kill Aura Variables
+local auraOn = false
+local killDist = 15
+
+-- Helper Functions
+local function updateFOV()
+    fovCircle.Radius = fovRadius
+    fovCircle.Position = Cam.ViewportSize / 2
+end
+
+local function isNPC(obj)
+    return obj:IsA("Model") 
+        and obj:FindFirstChild("Humanoid")
+        and obj.Humanoid.Health > 0
+        and obj:FindFirstChild("Head")
+        and obj:FindFirstChild("HumanoidRootPart")
+        and not Players:GetPlayerFromCharacter(obj)
+end
+
+local function updateNPCs()
+    local tempTable = {}
+    for _, obj in ipairs(workspace:GetDescendants()) do
+        if isNPC(obj) then
+            tempTable[obj] = true
+        end
+    end
+    for i = #validNPCs, 1, -1 do
+        if not tempTable[validNPCs[i]] then
+            table.remove(validNPCs, i)
+        end
+    end
+    for obj in pairs(tempTable) do
+        if not table.find(validNPCs, obj) then
+            table.insert(validNPCs, obj)
+        end
+    end
+end
+
+workspace.DescendantAdded:Connect(function(descendant)
+    if isNPC(descendant) then
+        table.insert(validNPCs, descendant)
+        local humanoid = descendant:WaitForChild("Humanoid")
+        humanoid.Destroying:Connect(function()
+            for i = #validNPCs, 1, -1 do
+                if validNPCs[i] == descendant then
+                    table.remove(validNPCs, i)
+                    break
+                end
+            end
+        end)
+    end
+end)
+
+workspace.DescendantRemoving:Connect(function(descendant)
+    if isNPC(descendant) then
+        for i =
+
+ #validNPCs, 1, -1 do
+            if validNPCs[i] == descendant then
+                table.remove(validNPCs, i)
+                break
+            end
+        end
+    end
+end)
+
+local function predictPos(target)
+    local rootPart = target:FindFirstChild("HumanoidRootPart")
+    local head = target:FindFirstChild("Head")
+    if not rootPart or not head then
+        return head and head.Position or rootPart and rootPart.Position
+    end
+    local velocity = rootPart.Velocity
+    local predictionTime = 0.02
+    local basePosition = rootPart.Position + velocity * predictionTime
+    local headOffset = head.Position - rootPart.Position
+    return basePosition + headOffset
+end
+
+local function getTarget()
+    local nearest = nil
+    local minDistance = math.huge
+    local viewportCenter = Cam.ViewportSize / 2
+    raycastParams.FilterDescendantsInstances = {LocalPlayer.Character}
+    for _, npc in ipairs(validNPCs) do
+        local predictedPos = predictPos(npc)
+        local screenPos, visible = Cam:WorldToViewportPoint(predictedPos)
+        if visible and screenPos.Z > 0 then
+            local distance = (Vector2.new(screenPos.X, screenPos.Y) - viewportCenter).Magnitude
+            if distance <= fovRadius then
+                local ray = workspace:Raycast(
+                    Cam.CFrame.Position,
+                    (predictedPos - Cam.CFrame.Position).Unit * 1000,
+                    raycastParams
+                )
+                if ray and ray.Instance:IsDescendantOf(npc) then
+                    if distance < minDistance then
+                        minDistance = distance
+                        nearest = npc
+                    end
+                end
+            end
+        end
+    end
+    return nearest
+end
+
+local function aim(targetPosition)
+    local currentCF = Cam.CFrame
+    local targetDirection = (targetPosition - currentCF.Position).Unit
+    local smoothFactor = 0.581
+    local newLookVector = currentCF.LookVector:Lerp(targetDirection, smoothFactor)
+    Cam.CFrame = CFrame.new(currentCF.Position, currentCF.Position + newLookVector)
+end
+
+local function CreateESP(object, color)
+    if not object or not object.PrimaryPart then return end
+    if ESPHandles[object] then return end 
+
+    local highlight = Instance.new("Highlight")
+    highlight.Name = "ESP_Highlight"
+    highlight.Adornee = object
+    highlight.FillColor = color
+    highlight.OutlineColor = color
+    highlight.Parent = object
+
+    local billboard = Instance.new("BillboardGui")
+    billboard.Name = "ESP_Billboard"
+    billboard.Adornee = object.PrimaryPart
+    billboard.Size = UDim2.new(0, 200, 0, 50)
+    billboard.StudsOffset = Vector3.new(0, 5, 0)
+    billboard.AlwaysOnTop = true
+    billboard.Parent = object
+
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Text = object.Name
+    textLabel.Size = UDim2.new(1, 0, 1, 0)
+    textLabel.TextColor3 = color
+    textLabel.BackgroundTransparency = 1
+    textLabel.TextSize = 7
+    textLabel.Parent = billboard
+
+    ESPHandles[object] = {Highlight = highlight, Billboard = billboard, Color = color}
+end
+
+local function ClearESP()
+    for obj, handles in pairs(ESPHandles) do
+        if handles.Highlight then handles.Highlight:Destroy() end
+        if handles.Billboard then handles.Billboard:Destroy() end
+        ESPHandles[obj] = nil
+    end
+end
+
+local function UpdateESP()
+    ClearESP()
+    local runtimeItems = workspace:FindFirstChild("RuntimeItems")
+    if runtimeItems then
+        for _, item in ipairs(runtimeItems:GetDescendants()) do
+            if item:IsA("Model") then
+                CreateESP(item, Color3.new(1, 0, 0))
+            end
+        end
+    end
+    local nightEnemies = workspace:FindFirstChild("NightEnemies")
+    if nightEnemies then
+        for _, enemy in ipairs(nightEnemies:GetDescendants()) do
+            if enemy:IsA("Model") then
+                CreateESP(enemy, Color3.new(0, 0, 1))
+            end
+        end
+    end
+end
+
+local function AddESPForPlayer(player)
+    if not player.Character or not player.Character:FindFirstChild("HumanoidRootPart") or player == LocalPlayer then return end
+    local character = player.Character
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+    local humanoid = character:WaitForChild("Humanoid")
+    local espFrame = Instance.new("BillboardGui")
+    espFrame.Parent = character
+    espFrame.Adornee = humanoidRootPart
+    espFrame.Size = UDim2.new(0, 100, 0, 40)
+    espFrame.StudsOffset = Vector3.new(0, 3, 0)
+    espFrame.AlwaysOnTop = true
+    espFrame.Name = "ESPFrame"
+    local frame = Instance.new("Frame")
+    frame.Parent = espFrame
+    frame.Size = UDim2.new(1, 0, 1, 0)
+    frame.BackgroundTransparency = 1
+    local healthText = Instance.new("TextLabel")
+    healthText.Parent = frame
+    healthText.Size = UDim2.new(1, 0, 0.3, 0)
+    healthText.BackgroundTransparency = 1
+    healthText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    healthText.TextSize = 10
+    healthText.Text = "Health: " .. math.floor(humanoid.Health)
+    humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+        healthText.Text = "Health: " .. math.floor(humanoid.Health)
+    end)
+end
+
+local function AddESPForEnemy(enemy)
+    if not enemy or not enemy:FindFirstChild("HumanoidRootPart") then return end
+    local character = enemy
+    local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+    local humanoid = character:FindFirstChild("Humanoid")
+    if not humanoid then return end
+    local espFrame = Instance.new("BillboardGui")
+    espFrame.Parent = character
+    espFrame.Adornee = humanoidRootPart
+    espFrame.Size = UDim2.new(0, 100, 0, 40)
+    espFrame.StudsOffset = Vector3.new(0, 3, 0)
+    espFrame.AlwaysOnTop = true
+    espFrame.Name = "ESPFrame"
+    local frame = Instance.new("Frame")
+    frame.Parent = espFrame
+    frame.Size = UDim2.new(1, 0, 1, 0)
+    frame.BackgroundTransparency = 1
+    local healthText = Instance.new("TextLabel")
+    healthText.Parent = frame
+    healthText.Size = UDim2.new(1, 0, 0.3, 0)
+    healthText.BackgroundTransparency = 1
+    healthText.TextColor3 = ESPColor
+    healthText.TextSize = 10
+    healthText.Text = "Health: " .. math.floor(humanoid.Health)
+    humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+        healthText.Text = "Health: " .. math.floor(humanoid.Health)
+    end)
+end
+
+local function GetItemNames()
+    local items = {}
+    local runtimeItems = workspace:FindFirstChild("RuntimeItems")
+    if runtimeItems then
+        for _, item in ipairs(runtimeItems:GetDescendants()) do
+            if item:IsA("Model") then
+                table.insert(items, item.Name)
+            end
+        end
+    end
+    return items
+end
+
+local function applySpeedHack()
+    if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid") then
+        LocalPlayer.Character.Humanoid.WalkSpeed = speedHackEnabled and speedValue or 16
+    end
+end
+
+local function applyJumpHack()
+    if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid") then
+        LocalPlayer.Character.Humanoid.JumpHeight = jumpHackEnabled and (7.2 * jumpMultiplier) or 7.2
+    end
+end
+
+local function applyNoClip()
+    if LocalPlayer.Character then
+        for _, part in ipairs(LocalPlayer.Character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = not noClipEnabled
+            end
+        end
+    end
+end
+
+-- Kill Aura Functions (Mới)
+local function getNearestNPC()
+    local root = plr.Character and plr.Character:FindFirstChild("HumanoidRootPart")
+    if not root then return end
+
+    local nearest, minDist = nil, math.huge
+    for _, npc in ipairs(workspace:GetDescendants()) do
+        if npc:IsA("Model") and npc:FindFirstChild("HumanoidRootPart") and npc:FindFirstChild("Humanoid") and not game.Players:GetPlayerFromCharacter(npc) then
+            local hrp, hum = npc.HumanoidRootPart, npc.Humanoid
+            local dist = (hrp.Position - root.Position).Magnitude
+            if hum.Health > 0 and dist < minDist and dist <= killDist then
+                nearest, minDist = npc, dist
+            end
+        end
+    end
+    return nearest
+end
+
+local function dragAndKill(npc)
+    if not npc then return end
+    local hum = npc:FindFirstChild("Humanoid")
+    if hum and hum.Health <= 0 then return end
+
+    local dragRemote = rs:FindFirstChild("Shared") and rs.Shared:FindFirstChild("Remotes") and rs.Shared.Remotes:FindFirstChild("RequestStartDrag")
+    if dragRemote then
+        dragRemote:FireServer(npc)
+        task.wait(0.5)
+        if hum and hum.Health > 0 then npc:BreakJoints() end
+    end
+end
+
+local function killAuraLoop()
+    while auraOn do
+        local target = getNearestNPC()
+        if target then dragAndKill(target) end
+        task.wait(0.2)
+    end
+end
+
+-- Main Loop
+local lastUpdate = 0
+local UPDATE_INTERVAL = 0.4
+
+RunService.Heartbeat:Connect(function(dt)
+    lastUpdate = lastUpdate + dt
+    if lastUpdate >= UPDATE_INTERVAL then
+        updateNPCs()
+        lastUpdate = 0
+    end
+    if aimbotEnabled then
+        local target = getTarget()
+        if target then
+            local predictedPosition = predictPos(target)
+            aim(predictedPosition)
+        end
+    end
+    if ESPPlayerEnabled then
+        for _, player in pairs(Players:GetPlayers()) do
+            if player ~= LocalPlayer and player.Character and not player.Character:FindFirstChild("ESPFrame") then
+                AddESPForPlayer(player)
+            end
+        end
+    end
+    if ESPZombyEnabled then
+        for _, enemy in pairs(workspace:GetDescendants()) do
+            if enemy:IsA("Model") and enemy:FindFirstChild("Humanoid") and not Players:GetPlayerFromCharacter(enemy) and not enemy:FindFirstChild("ESPFrame") then
+                AddESPForEnemy(enemy)
+            end
+        end
+    end
+end)
+
+RunService.Stepped:Connect(function()
+    if noClipEnabled then
+        applyNoClip()
+    end
+end)
+
+UserInputService.InputBegan:Connect(function(input)
+    if input.UserInputType == aimbotKey then
+        aimbotEnabled = true
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(input)
+    if input.UserInputType == aimbotKey then
+        aimbotEnabled = false
+    end
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- NOTIFICATION
+
+Rayfield:Notify({
+   Title = "Unsupported Executor!",
+   Content = "Your executor not support 100% UNC. Some of the feature need UNC and may break if not supported!",
+   Duration = 6.5,
+   Image = "triangle-alert",
+})
+
+-- Home TAB
+local HomeSection = HomeTab:CreateSection("Main Feature")
+local Creditabel1 = HomeTab:CreateLabel("Bypass made by s1lvyIsMe", "croissant")
+
+-- FPS Drop Simulator Function
+local function simulateFPSDrop(duration)
+    local startTime = tick()
+    while tick() - startTime < duration do
+        -- Busy wait to simulate lag
+    end
+end
+
+local Button = HomeTab:CreateButton({
+   Name = "Bypass Anti Cheat",
+   Callback = function()
+       if alreadyBypassed then
+           game.StarterGui:SetCore("SendNotification", {
+               Title = "Bypass Blocked",
+               Text = "Already bypassed!",
+               Duration = 3
+           })
+           return
+       end
+
+       alreadyBypassed = true
+
+       game.StarterGui:SetCore("SendNotification", {
+           Title = "Made by s1lvyIsMe!!",
+           Text = "s1lvyIsMe made this anti cheat bypass!! :3",
+           Duration = 3
+       })
+
+       -- Simulate FPS drop / lag for 3 seconds
+       simulateFPSDrop(10)
+
+       local randomRate = math.random(1, 100)
+
+       game.StarterGui:SetCore("SendNotification", {
+           Title = "Bypass Success",
+           Text = "Successful Bypass! Rate chance is " .. tostring(randomRate) .. ", enjoy! :3",
+           Duration = 5
+       })
+   end,
+})
+
+-- Aimbot TAB
+AimbotTab:CreateToggle({
+    Name = "Enable Aimbot",
+    CurrentValue = false,
+    Callback = function(Value)
+        aimbotEnabled = Value
+        fovCircle.Visible = Value
+        Rayfield:Notify({
+            Title = "Aimbot",
+            Content = Value and "Aimbot enabled" or "Aimbot disabled",
+            Duration = 2
+        })
+    end
+})
+
+AimbotTab:CreateSlider({
+    Name = "FOV Radius",
+    Range = {50, 500},
+    Increment = 10,
+    CurrentValue = 100,
+    Callback = function(Value)
+        fovRadius = Value
+        updateFOV()
+    end
+})
+
+updateFOV()
+
+-- Brings Tab
+local itemDropdown
+itemDropdown = BringsTab:CreateDropdown({
+    Name = "Choose Item",
+    Options = GetItemNames(),
+    CurrentOption = "Select an item",
+    Callback = function(Value)
+        selectedItem = Value
+    end
+})
+
+BringsTab:CreateButton({
+    Name = "Refresh Items",
+    Callback = function()
+        local newItems = GetItemNames()
+        itemDropdown:Refresh(newItems, "Select an item")
+        Rayfield:Notify({
+            Title = "Items Refreshed",
+            Content = "Dropdown updated with " .. #newItems .. " items",
+            Duration = 3
+        })
+    end
+})
+
+BringsTab:CreateButton({
+    Name = "Collect Selected Item",
+    Callback = function()
+        if selectedItem == "Select an item" then
+            Rayfield:Notify({
+                Title = "Error",
+                Content = "Please select an item first!",
+                Duration = 3
+            })
+            return
+        end
+        local runtimeItems = workspace:FindFirstChild("RuntimeItems")
+        if not runtimeItems then return end
+        local itemToCollect
+        for _, item in ipairs(runtimeItems:GetDescendants()) do
+            if item:IsA("Model") and item.Name == selectedItem then
+                itemToCollect = item
+                break
+            end
+        end
+        if itemToCollect and itemToCollect.PrimaryPart then
+            local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+            local hrp = char:WaitForChild("HumanoidRootPart")
+            itemToCollect:SetPrimaryPartCFrame(hrp.CFrame + Vector3.new(0, 1, 0))
+            Rayfield:Notify({
+                Title = "Success",
+                Content = selectedItem .. " collected!",
+                Duration = 3
+            })
+        end
+    end
+})
+
+BringsTab:CreateButton({
+    Name = "Collect All Items",
+    Callback = function()
+        local runtimeItems = workspace:FindFirstChild("RuntimeItems")
+        if not runtimeItems then return end
+        local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+        local hrp = char:WaitForChild("HumanoidRootPart")
+        for _, item in ipairs(runtimeItems:GetDescendants()) do
+            if item:IsA("Model") and item.PrimaryPart then
+                local offset = hrp.CFrame.LookVector * 5
+                item:SetPrimaryPartCFrame(hrp.CFrame + offset)
+            end
+        end
+        Rayfield:Notify({
+            Title = "Success",
+            Content = "All items collected!",
+            Duration = 3
+        })
+    end
+})
+
+-- ESP Tab
+ESPTab:CreateToggle({
+    Name = "ESP Items and Mobs",
+    CurrentValue = false,
+    Callback = function(Value)
+        ESPEnabled = Value
+        if Value then
+            UpdateESP()
+            spawn(function()
+                while ESPEnabled do
+                    UpdateESP()
+                    wait(1)
+                end
+            end)
+        else
+            ClearESP()
+        end
+        Rayfield:Notify({
+            Title = "ESP",
+            Content = Value and "Items and Mobs ESP enabled" or "Items and Mobs ESP disabled",
+            Duration = 2
+        })
+    end
+})
+
+ESPTab:CreateToggle({
+    Name = "ESP Players",
+    CurrentValue = false,
+    Callback = function(Value)
+        ESPPlayerEnabled = Value
+    end
+})
+
+ESPTab:CreateToggle({
+    Name = "ESP Zombies",
+    CurrentValue = false,
+    Callback = function(Value)
+        ESPZombyEnabled = Value
+    end
+})
+
+-- Movement Tab
+MovementTab:CreateSlider({
+    Name = "WalkSpeed",
+    Range = {1, 500},
+    Increment = 1,
+    CurrentValue = 50,
+    Callback = function(Value)
+        speedValue = Value
+        applySpeedHack()
+    end
+})
+
+MovementTab:CreateToggle({
+    Name = "Speed Hack",
+    CurrentValue = false,
+    Callback = function(Value)
+        speedHackEnabled = Value
+        applySpeedHack()
+    end
+})
+
+MovementTab:CreateSlider({
+    Name = "Jump Height",
+    Range = {10, 500},
+    Increment = 1,
+    CurrentValue = 50,
+    Callback = function(Value)
+        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid") then
+            LocalPlayer.Character.Humanoid.JumpHeight = Value
+        end
+    end
+})
+
+MovementTab:CreateToggle({
+    Name = "Infinite Jump",
+    CurrentValue = false,
+    Callback = function(Value)
+        infiniteJumpEnabled = Value
+        if Value then
+            UserInputService.JumpRequest:Connect(function()
+                if LocalPlayer.Character then
+                    LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+                end
+            end)
+        end
+    end
+})
+
+MovementTab:CreateToggle({
+    Name = "Fly works bad",
+    CurrentValue = false,
+    Callback = function(Value)
+        flyEnabled = Value
+        local char = LocalPlayer.Character
+        local hrp = char and char:FindFirstChild("HumanoidRootPart")
+        if not hrp then return end
+        if Value then
+            local speed = 50
+            local bodyVelocity = Instance.new("BodyVelocity")
+            bodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+            bodyVelocity.Parent = hrp
+            local bodyGyro = Instance.new("BodyGyro")
+            bodyGyro.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+            bodyGyro.CFrame = hrp.CFrame
+            bodyGyro.Parent = hrp
+            spawn(function()
+                while flyEnabled and hrp and hrp.Parent do
+                    local cam = workspace.CurrentCamera
+                    local moveDirection = Vector3.new(
+                        (UserInputService:IsKeyDown(Enum.KeyCode.D) and 1 or 0) - (UserInputService:IsKeyDown(Enum.KeyCode.A) and 1 or 0),
+                        (UserInputService:IsKeyDown(Enum.KeyCode.Space) and 1 or 0) - (UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) and 1 or 0),
+                        (UserInputService:IsKeyDown(Enum.KeyCode.S) and 1 or 0) - (UserInputService:IsKeyDown(Enum.KeyCode.W) and 1 or 0)
+                    ).Unit
+                    bodyVelocity.Velocity = cam.CFrame:VectorToWorldSpace(moveDirection) * speed
+                    bodyGyro.CFrame = cam.CFrame
+                    wait()
+                end
+                if bodyVelocity then bodyVelocity:Destroy() end
+                if bodyGyro then bodyGyro:Destroy() end
+            end)
+        else
+            local bodyVelocity = hrp:FindFirstChildOfClass("BodyVelocity")
+            local bodyGyro = hrp:FindFirstChildOfClass("BodyGyro")
+            if bodyVelocity then bodyVelocity:Destroy() end
+            if bodyGyro then bodyGyro:Destroy() end
+        end
+    end
+})
+
+MovementTab:CreateToggle({
+    Name = "Jump Hack",
+    CurrentValue = false,
+    Callback = function(Value)
+        jumpHackEnabled = Value
+        applyJumpHack()
+    end
+})
+
+MovementTab:CreateSlider({
+    Name = "Jump Power",
+    Range = {1, 5},
+    Increment = 0.1,
+    CurrentValue = 1.5,
+    Callback = function(Value)
+        jumpMultiplier = Value
+        applyJumpHack()
+    end
+})
+
+MovementTab:CreateToggle({
+    Name = "NoClip",
+    CurrentValue = false,
+    Callback = function(Value)
+        noClipEnabled = Value
+    end
+})
+
+
+MovementTab:CreateToggle({
+    Name = "Kill Aura",
+    CurrentValue = false,
+    Callback = function(Value)
+        auraOn = Value
+        Rayfield:Notify({
+            Title = "Kill Aura",
+            Content = Value and "Kill Aura enabled" or "Kill Aura disabled",
+            Duration = 2
+        })
+        if Value then
+            spawn(killAuraLoop)
+        end
+    end
+})
+
+MovementTab:CreateSlider({
+    Name = "Kill Aura Range",
+    Range = {5, 50},
+    Increment = 1,
+    CurrentValue = 15,
+    Callback = function(Value)
+        killDist = Value
+    end
+})
