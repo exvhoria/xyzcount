@@ -1,11 +1,11 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "𓆩 𝘈𝘴𝘵𝘳𝘢𝘭𝘏𝘶𝘣 𓆪 ⤙v1.3⤚",
+   Name = "𓆩 AstralHub 𓆪 || V1.3",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "V1.3 — Private Version",
    LoadingSubtitle = "by GhosttedXV",
-   Theme = "Serenity", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Bloom", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -24,8 +24,8 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "𝘈𝘴𝘵𝘳𝘢𝘭𝘏𝘶𝘣 - KEY SYSTEM",
-      Subtitle = "𝘈𝘴𝘵𝘳𝘢𝘭𝘏𝘶𝘣 by GhosttedXV",
+      Title = "AstralHub - KEY SYSTEM",
+      Subtitle = "AstralHub by GhosttedXV",
       Note = "KEY: AstronomyBackwards", -- Use this to tell the user how to get a key
       FileName = "AstraHubKEY-ZXAQ", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
@@ -41,6 +41,9 @@ local PlayerTab = Window:CreateTab("Player", "rewind")
 local VisualTab = Window:CreateTab("Visual", "rewind")
 local UtilityTab = Window:CreateTab("Utility", "rewind")
 
+-- LOCAL INFORMATION
+local alreadyBypassed = false
+
 -- NOTIFICATION
 
 Rayfield:Notify({
@@ -53,25 +56,42 @@ Rayfield:Notify({
 -- Home TAB
 local HomeSection = HomeTab:CreateSection("Main Feature")
 
+-- FPS Drop Simulator Function
+local function simulateFPSDrop(duration)
+    local startTime = tick()
+    while tick() - startTime < duration do
+        -- Busy wait to simulate lag
+    end
+end
+
 local Button = HomeTab:CreateButton({
    Name = "Bypass Anti Cheat",
    Callback = function()
-       -- Step 1: Show "Bypassing...."
+       if alreadyBypassed then
+           game.StarterGui:SetCore("SendNotification", {
+               Title = "Bypass Blocked",
+               Text = "Already bypassed!",
+               Duration = 3
+           })
+           return
+       end
+
+       alreadyBypassed = true
+
        game.StarterGui:SetCore("SendNotification", {
-           Title = "ANTI CHEAT BYPASSER by s1lvyIsMe!!",
+           Title = "Made by s1lvyIsMe!!",
            Text = "s1lvyIsMe made this anti cheat bypass!! :3",
            Duration = 3
        })
 
-       wait(3) -- Wait for 3 seconds before next message
+       -- Simulate FPS drop / lag for 3 seconds
+       simulateFPSDrop(3)
 
-       -- Step 2: Generate a random number
        local randomRate = math.random(1, 100)
 
-       -- Step 3: Show "Successful Bypass!"
        game.StarterGui:SetCore("SendNotification", {
            Title = "Bypass Success",
-           Text = "Successful Bypass! Rate change is " .. tostring(randomRate) .. ", enjoy! :3",
+           Text = "Successful Bypass! Rate chance is " .. tostring(randomRate) .. ", enjoy! :3",
            Duration = 5
        })
    end,
