@@ -1,11 +1,11 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "𓆩 𝘈𝘴𝘵𝘳𝘢𝘭𝘏𝘶𝘣 𓆪 ⤙v1.3⤚",
+   Name = "AstralHub ⤙v1.3⤚",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "V1.3 — Private Version",
    LoadingSubtitle = "by GhosttedXV",
-   Theme = "Serenity", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -24,8 +24,8 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "𝘈𝘴𝘵𝘳𝘢𝘭𝘏𝘶𝘣 - KEY SYSTEM",
-      Subtitle = "𝘈𝘴𝘵𝘳𝘢𝘭𝘏𝘶𝘣 by GhosttedXV",
+      Title = "AstralHub - KEY SYSTEM",
+      Subtitle = "AstralHub by GhosttedXV",
       Note = "KEY: AstronomyBackwards", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
@@ -35,7 +35,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 -- TAB & SECTION
-local HomeTab = Window:CreateTab("Home", "House")
+local HomeTab = Window:CreateTab("Home", "house")
 local AutoFarmTab = Window:CreateTab("Auto Farm", "zap")
 local PlayerTab = Window:CreateTab("Player", "users")
 local VisualTab = Window:CreateTab("Visual", "eye")
@@ -76,3 +76,16 @@ local Button = HomeTab:CreateButton({
        })
    end,
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
