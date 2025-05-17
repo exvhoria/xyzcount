@@ -71,21 +71,8 @@ local Button = HomeTab:CreateButton({
        -- Step 3: Show "Successful Bypass!"
        game.StarterGui:SetCore("SendNotification", {
            Title = "Bypass Success",
-           Text = "Successful Bypass! Rate change is " .. tostring(randomRate) .. ", enjoy! :3"
+           Text = "Successful Bypass! Rate change is " .. tostring(randomRate) .. ", enjoy! :3",
            Duration = 5
        })
    end,
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
